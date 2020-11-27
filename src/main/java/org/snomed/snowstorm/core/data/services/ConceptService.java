@@ -327,7 +327,7 @@ public class ConceptService extends ComponentService {
 		}
 	}
 
-	private Page<Concept> doFind(
+	public Page<Concept> doFind(
 			Collection<?> conceptIdsToFind,
 			List<LanguageDialect> languageDialects,
 			BranchCriteria branchCriteria,
