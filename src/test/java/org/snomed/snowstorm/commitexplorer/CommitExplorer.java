@@ -12,10 +12,7 @@ import org.snomed.snowstorm.config.elasticsearch.DateToLongConverter;
 import org.snomed.snowstorm.config.elasticsearch.IndexConfig;
 import org.snomed.snowstorm.config.elasticsearch.LongToDateConverter;
 import org.snomed.snowstorm.config.elasticsearch.SnowstormElasticsearchMappingContext;
-import org.snomed.snowstorm.core.data.domain.Concept;
-import org.snomed.snowstorm.core.data.domain.Description;
-import org.snomed.snowstorm.core.data.domain.ReferenceSetMember;
-import org.snomed.snowstorm.core.data.domain.SnomedComponent;
+import org.snomed.snowstorm.core.data.domain.*;
 import org.snomed.snowstorm.core.data.services.DomainEntityConfiguration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -50,10 +47,11 @@ public class CommitExplorer {
 	private final String indexNamePrefix;
 
 	private void run() {
-		listCommits("MAIN");
-		listRecentVersions("255083005", Concept.class);
-		listRecentVersions("646067016", Description.class);
-		listRecentVersions("04591202-b9cb-45a5-8533-aa1f9e0f8644", ReferenceSetMember.class);
+//		listCommits("MAIN");
+		listRecentVersions("3544482005", Concept.class);
+//		listRecentVersions("646067016", Description.class);
+//		listRecentVersions("12060072028", Relationship.class);
+//		listRecentVersions("04591202-b9cb-45a5-8533-aa1f9e0f8644", ReferenceSetMember.class);
 	}
 
 	public static void main(String[] args) {
